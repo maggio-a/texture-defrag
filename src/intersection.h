@@ -37,8 +37,8 @@ struct HalfEdge {
     vcg::Point2d P0() const { return fp->V0(e)->T().P(); }
     vcg::Point2d P1() const { return fp->V1(e)->T().P(); }
 
-    Mesh::VertexPointer V0() const { return fp->cV0(e); }
-    Mesh::VertexPointer V1() const { return fp->cV1(e); }
+	Mesh::VertexPointer V0() const { return fp->V0(e); }
+	Mesh::VertexPointer V1() const { return fp->V1(e); }
 
     bool operator<(const HalfEdge& other) const { return (fp < other.fp) || (fp == other.fp && e < other.e); }
     bool operator==(const HalfEdge& other) const { return fp == other.fp && e == other.e; }
