@@ -20,6 +20,6 @@ unix {
 }
 
 win32 {
-  LIBS += -lopengl32
+  LIBS += -lopengl32 -lglu32
   DEFINES += NOMINMAX
 }
